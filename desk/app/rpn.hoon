@@ -1,5 +1,5 @@
 /-  rpn
-/+  default-agent, dbug, *rpn, shoe
+/+  default-agent, dbug, rpnlib=rpn, shoe, sole
 |%
 +$  versioned-state
   $%  state-0
@@ -8,7 +8,7 @@
   $:  %0
       stack=(list ?(@rs op:rpn))
   ==
-+$  card  card:agent:gall
++$  card  card:agent:shoe
 --
 %-  agent:dbug
 =|  state-0
@@ -37,15 +37,16 @@
   |=  =sole-id:shoe
   ^+  |~(nail *(like [? command:rpn]))
   %+  stag  |
-  (pose num:rpn ops:rpn)
+  (cook command:rpn ;~(pose num:rpnlib ops:rpnlib))
 ++  on-command
   |=  [=sole-id:shoe =command:rpn]
   ^-  (quip card _this)
   =/  old-stack  (weld stack ~[command])
-  =/  new-stack  (process old-stack)
+  =/  new-stack  (process:rpnlib old-stack)
+  !:
   :_  this(stack new-stack)
-  :~  [%shoe ~ sole+[%klr [[`%br ~ `%g] [(crip "{<old-stack>} →")]~]~]]
-      [%shoe ~ sole+[%klr [[`%br ~ `%g] [(crip "{<new-stack>}")]~]~]]
+  :~  [%shoe ~ sole+klr+~[(crip "{<old-stack>} →")]]
+      [%shoe ~ sole+klr+~[[[`%br ~ `%g] (crip "{<new-stack>}") ~]]]
   ==
 ++  can-connect
   |=  =sole-id:shoe
