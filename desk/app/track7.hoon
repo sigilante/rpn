@@ -37,16 +37,15 @@
 ++  on-command
   |=  [=sole-id:shoe =command]
   ^-  (quip card _this)
-  !:
   :_  this
   ^-  (list card)
   :~  :+  %shoe  ~
   ^-  shoe-effect:shoe
   :-  %sole
-  ^-  sole-effect:sole  :-  %mor
-  ^-  (list sole-effect:sole)
+  ^-  sole-effect:sole  :-  %klr
+  ^-  styx
   =/  idx  0
-  =|  fx=(list sole-effect:sole)
+  =|  fx=styx
   =/  rng  ~(. og eny:bowl)
   |-
   ?:  =(80 idx)  fx
@@ -55,7 +54,7 @@
   =^  hueb  rng  (rads:rng 256)
   %=  $
     idx  +(idx)
-    fx   (weld fx `(list sole-effect:sole)`~[klr+~[[`%br ~ `[r=`@ux`huer g=`@ux`hueg b=`@ux`hueb]] command]~])
+    fx   `styx`(weld fx `styx`~[[[`%br ~ `[r=`@ux`huer g=`@ux`hueg b=`@ux`hueb]] command ~]])
   ==  ==
 ++  can-connect
   |=  =sole-id:shoe
@@ -67,3 +66,4 @@
 ++  on-disconnect  on-disconnect:leather
 ++  tab-list       tab-list:leather
 --
+
