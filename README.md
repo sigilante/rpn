@@ -1,6 +1,6 @@
 #   `%rpn`
 
-Status:  Demo app, considered complete.
+Status:  Demo app, complete.
 
 Reverse Polish Notation calculator for Urbit.  An App Workshop tutorial.
 
