@@ -1,5 +1,7 @@
 #   `%rpn`
 
+Status:  Demo app, considered complete.
+
 Reverse Polish Notation calculator for Urbit.  An App Workshop tutorial.
 
 Supports numbers (as `@rs` single-precision floating-point values) and basic arithmetic operators `+`, `-`, `*`, `/`.  `.` to display top of stack.
