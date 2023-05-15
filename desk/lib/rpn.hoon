@@ -20,8 +20,8 @@
     (flop (weld ~[(add:rs augend addend)] (slag 3 (flop stack))))
     ::
       [%op %sub]
-    =/  minuend       ;;(@rs `command:rpn`(snag 1 (flop stack)))
-    =/  subtrahend    ;;(@rs `command:rpn`(snag 2 (flop stack)))
+    =/  minuend       ;;(@rs `command:rpn`(snag 2 (flop stack)))
+    =/  subtrahend    ;;(@rs `command:rpn`(snag 1 (flop stack)))
     (flop (weld ~[(sub:rs minuend subtrahend)] (slag 3 (flop stack))))
     ::
       [%op %mul]
@@ -30,8 +30,8 @@
     (flop (weld ~[(mul:rs multiplicand multiplier)] (slag 3 (flop stack))))
     ::
       [%op %div]
-    =/  numerator     ;;(@rs `command:rpn`(snag 1 (flop stack)))
-    =/  denominator   ;;(@rs `command:rpn`(snag 2 (flop stack)))
+    =/  numerator     ;;(@rs `command:rpn`(snag 2 (flop stack)))
+    =/  denominator   ;;(@rs `command:rpn`(snag 1 (flop stack)))
     (flop (weld ~[(div:rs numerator denominator)] (slag 3 (flop stack))))
     ::
       [%op %sho]
